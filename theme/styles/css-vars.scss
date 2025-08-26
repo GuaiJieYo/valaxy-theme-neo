@@ -1,0 +1,8 @@
+@use 'valaxy/client/styles/mixins/index.scss' as * with (
+  $namespace: 'st'
+);
+
+:root {
+  --nav-font-size: 20px;
+  --nav-text-color: #27272A;
+}

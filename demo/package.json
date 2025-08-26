@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:ssg && npm run rss",
+    "build:spa": "valaxy build",
+    "build:ssg": "valaxy build --ssg",
+    "dev": "valaxy",
+    "rss": "valaxy rss",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "valaxy": "^0.26.3",
+    "valaxy-theme-neo": "workspace:*"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
