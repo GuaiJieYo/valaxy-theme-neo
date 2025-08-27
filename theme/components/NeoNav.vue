@@ -1,11 +1,22 @@
+<script setup>
+import { useThemeConfig } from "../composables";
+
+const themeConfig = useThemeConfig().value.Navbar;
+</script>
+
 <template>
   <nav>
     <div class="logo">
-      <img v-show="themeConfig.logo" :src="themeConfig.logo">
+      <img v-show="themeConfig.logo" :src="themeConfig.logo" />
     </div>
     <div class="links">
-      <router-link v-for="v in themeConfig.links" :key="v.name" :to="v.url" active-class="active">
-        <i :class="v.icon"></i>
+      <router-link
+        v-for="v in themeConfig.links"
+        :key="v.name"
+        :to="v.url"
+        active-class="active"
+      >
+        <i :class="v.icon" />
         <span>{{ v.name }}</span>
       </router-link>
     </div>
@@ -14,13 +25,16 @@
 
 <style lang="scss" scoped>
 nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: var(--nav-font-size);
-  color: var(--nav-text-color);
 
   .logo {
     width: 60px;
@@ -32,44 +46,39 @@ nav {
       width: 100%;
       border: 3px solid #fff;
       transition: all 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      box-shadow: var(--shadow);
 
       &:hover {
         transform: rotate(360deg);
       }
     }
-
   }
 
   .links {
     display: flex;
-    padding: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 5px 10px;
+    box-shadow: var(--shadow);
     border-radius: 50px;
     border: #18181b1a solid 1px;
+    background-color: var(--bg-color);
 
     a {
       margin: 0 10px;
       display: flex;
       align-items: center;
       position: relative;
+      transition: all 0.3s ease-in-out;
+      color: var(--nav-text-color);
 
-      &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-48%);
-        // width: 95%;
-        width: 0;
-        height: 4px;
-        background-color: #00000018;
-        border-radius: 5px;
-        
+      &.active {
+        color: var(--link-active-color);
+        text-shadow: 0 0 20px var(--link-hover-color);
+        transform: scale(1.05);
       }
 
-      &::before.active {
-        width: 95%;
+      &:hover:not(.active) {
+        color: var(--link-hover-color);
+        text-shadow: 0 0 20px var(--link-hover-color);
       }
 
       i {
@@ -84,9 +93,3 @@ nav {
   }
 }
 </style>
-
-<script setup>
-import { useThemeConfig } from '../composables';
-
-const themeConfig = useThemeConfig().value.Navbar;
-</script>

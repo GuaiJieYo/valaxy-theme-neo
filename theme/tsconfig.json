@@ -4,7 +4,10 @@
   "compilerOptions": {
     "target": "ESNext",
     "jsx": "preserve",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "node",
@@ -21,5 +24,8 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "exclude": ["**/dist/**", "node_modules"]
+  "exclude": [
+    "**/dist/**",
+    "node_modules"
+  ]
 }
