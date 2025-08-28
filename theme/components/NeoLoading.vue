@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, computed } from "vue";
+import { onMounted, ref, onBeforeUnmount } from "vue";
 import { useNeoStore } from "../stores";
 import { useThemeConfig } from "../composables";
 
@@ -14,9 +14,9 @@ if (themeConfig.enable) {
     stillLoading.value = true;
   }, themeConfig.timeout);
 
-  // 挂载网页后取消延迟
-  computed(() => {
-    if (!store.showLoading) clearTimeout(delay);
+  // 卸载页面时清除延迟
+  onBeforeUnmount(() => {
+    clearTimeout(delay);
   });
 }
 </script>

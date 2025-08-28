@@ -47,6 +47,7 @@ nav {
       border: 3px solid #fff;
       transition: all 0.3s ease-in-out;
       box-shadow: var(--shadow);
+      background-color: var(--bg-color);
 
       &:hover {
         transform: rotate(360deg);
