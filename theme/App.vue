@@ -1,18 +1,18 @@
-<template>
-  <NeoNav></NeoNav>
-  <Transition name="fade">
-    <Loading v-if="store.showLoading"></Loading>
-  </Transition>
-</template>
-
 <script setup>
-import { onMounted } from 'vue';
-import { useAppStore } from 'valaxy';
-import "./styles/vue-transition.scss"
+import { useAppStore } from "valaxy";
+import { onMounted } from "vue";
+import "./styles/vue-transition.scss";
 
-let store = useAppStore();
+const store = useAppStore();
 
 onMounted(() => {
   store.showLoading = false;
-})
+});
 </script>
+
+<template>
+  <NeoNav />
+  <Transition name="fade">
+    <NeoLoading v-if="store.showLoading" />
+  </Transition>
+</template>

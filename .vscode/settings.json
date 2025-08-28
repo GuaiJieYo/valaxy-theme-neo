@@ -18,7 +18,7 @@
   "svg.preview.background": "editor",
 
   // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
+  "prettier.enable": true,
   "editor.formatOnSave": false,
   // Auto fix
   "editor.codeActionsOnSave": {
@@ -47,5 +47,6 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+  "Codegeex.RepoIndex": true
 }

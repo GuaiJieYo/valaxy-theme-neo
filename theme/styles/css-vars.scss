@@ -1,8 +1,10 @@
-@use 'valaxy/client/styles/mixins/index.scss' as * with (
-  $namespace: 'st'
-);
+@use 'valaxy/client/styles/mixins/index.scss' as * with ($namespace: 'st');
 
 :root {
+  --bg-color: rgb(247, 249, 254);
+  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   --nav-font-size: 20px;
-  --nav-text-color: #27272A;
+  --nav-text-color: rgb(51, 54, 57);
+  --link-hover-color: rgba(251, 114, 134, 0.617);
+  --link-active-color: rgb(251, 114, 134);
 }
