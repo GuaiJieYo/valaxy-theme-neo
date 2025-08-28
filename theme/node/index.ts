@@ -13,7 +13,7 @@ export const defaultThemeConfig: ThemeConfig = {
   LoadingPage: {
     enable: true,
     text: "网页仍在加载中~",
-    timeout: 6000,
+    timeout: 5000,
   },
   Navbar: {
     logo: "./favicon.svg",

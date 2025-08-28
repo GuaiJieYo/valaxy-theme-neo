@@ -12,10 +12,10 @@ export default defineConfig<ThemeConfig>({
     LoadingPage: {
       enable: true,
       text: "网页仍在加载中~",
-      timeout: 6000,
+      timeout: 5000,
     },
     Navbar: {
-      logo: "https://www.guaijie.eu.org/favicon.ico",
+      logo: "https://valaxy.site/assets/valaxy-logo.DPa8-qbg.png",
       links: [
         {
           name: "Home",
@@ -35,16 +35,16 @@ export default defineConfig<ThemeConfig>({
       ],
     },
     Banner: {
-      title: "GuaiJie",
-      subtitle: "Welcome to my blog",
+      title: "Hi,I'm GuaiJie!",
+      subtitle: "A Front-end Developer",
       background: [
-        "https://cdn.guaijie.eu.org/background/bg1.jpg",
-        "https://cdn.guaijie.eu.org/background/bg2.jpg",
-        "https://cdn.guaijie.eu.org/background/bg3.jpg",
-        "https://cdn.guaijie.eu.org/background/bg4.jpg",
-        "https://cdn.guaijie.eu.org/background/bg5.jpg",
-        "https://cdn.guaijie.eu.org/background/bg6.jpg",
-        "https://cdn.guaijie.eu.org/background/bg7.jpg",
+        "https://img.cdn1.vip/i/68b00188e8f86_1756365192.webp",
+        "https://img.cdn1.vip/i/68b001849e487_1756365188.webp",
+        "https://img.cdn1.vip/i/68b0018835d64_1756365192.webp",
+        "https://img.cdn1.vip/i/68b00186a3a00_1756365190.webp",
+        "https://img.cdn1.vip/i/68b00186a9bc4_1756365190.webp",
+        "https://img.cdn1.vip/i/68b001931a6a1_1756365203.webp",
+        "https://img.cdn1.vip/i/68b0018d963e1_1756365197.webp",
       ],
     },
   },

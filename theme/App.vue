@@ -1,12 +1,12 @@
 <script setup>
-import { useAppStore } from "valaxy";
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
+import { useNeoStore } from "./stores";
 import "./styles/vue-transition.scss";
 
-const store = useAppStore();
+const store = useNeoStore();
 
 onMounted(() => {
-  store.showLoading = false;
+  store.loadedCount++;
 });
 </script>
 

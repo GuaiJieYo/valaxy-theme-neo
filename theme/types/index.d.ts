@@ -24,7 +24,7 @@ export interface ThemeConfig extends DefaultTheme.Config {
     text?: string;
     /**
      * @name 超时时间
-     * @default 6000
+     * @default 5000
      */
     timeout?: number;
   };

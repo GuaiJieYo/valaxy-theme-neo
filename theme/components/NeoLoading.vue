@@ -1,9 +1,11 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed } from "vue";
+import { useNeoStore } from "../stores";
 import { useThemeConfig } from "../composables";
 
 const themeConfig = useThemeConfig().value.LoadingPage;
 const stillLoading = ref(false);
+const store = useNeoStore();
 
 // 判断是否启用loading
 if (themeConfig.enable) {
@@ -13,8 +15,8 @@ if (themeConfig.enable) {
   }, themeConfig.timeout);
 
   // 挂载网页后取消延迟
-  onMounted(() => {
-    clearTimeout(delay);
+  computed(() => {
+    if (!store.showLoading) clearTimeout(delay);
   });
 }
 </script>
@@ -29,7 +31,6 @@ if (themeConfig.enable) {
 </template>
 
 <style lang="scss" scoped>
-// 源码来自https://codepen.io/CrocoDillon/pen/DMNWjR
 .NeoLoading {
   width: 100%;
   height: 100%;
