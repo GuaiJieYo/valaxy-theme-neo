@@ -8,6 +8,10 @@ import { defineConfig } from "valaxy";
 export default defineConfig<ThemeConfig>({
   theme: "neo",
 
+  features: {
+    katex: false, // 禁止全局使用katex(字体引用真的占好长的时间啊！)
+  },
+
   themeConfig: {
     LoadingPage: {
       enable: true,

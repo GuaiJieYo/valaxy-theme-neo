@@ -5,7 +5,7 @@ import { defaultThemeConfig, generateSafelist } from "./node";
 export default defineTheme<ThemeConfig>((options) => {
   return {
     themeConfig: defaultThemeConfig,
-    vite: {},
+    // vite: ,
     unocss: {
       safelist: generateSafelist(options.config.themeConfig as ThemeConfig),
     },
