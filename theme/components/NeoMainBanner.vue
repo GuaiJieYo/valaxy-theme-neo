@@ -6,8 +6,6 @@ import { useThemeConfig } from "../composables";
 const themeConfig = useThemeConfig();
 const neoStore = useNeoStore();
 
-neoStore.addTotalLoadCount(2); // 增加需要加载组件数量
-
 // Refs
 const bg = ref("");
 const saying = ref("海内存知己，天涯若比邻。");
@@ -90,6 +88,7 @@ function startTypingAnimation(text) {
 
 // 在组件挂载时设置背景
 onMounted(async () => {
+  neoStore.addTotalLoadCount(2); // 当前页面共两个需要加载动画等待的项
   bg.value = getRandomBackground(bannerConfig.value.background);
 
   // 获取一言

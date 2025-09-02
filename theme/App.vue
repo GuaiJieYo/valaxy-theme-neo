@@ -3,17 +3,17 @@ import { onMounted } from "vue";
 import { useNeoStore } from "./stores";
 import "./styles/vue-transition.scss";
 
-const store = useNeoStore();
-store.addTotalLoadCount(); // 增加需要加载组件数量
+const neoStore = useNeoStore();
 
 onMounted(() => {
-  store.incrementLoadedCount();
+  neoStore.addTotalLoadCount();
+  neoStore.incrementLoadedCount();
 });
 </script>
 
 <template>
   <NeoNav />
   <Transition name="fade">
-    <NeoLoading v-if="store.showLoading" />
+    <NeoLoading v-if="neoStore.showLoading" />
   </Transition>
 </template>
