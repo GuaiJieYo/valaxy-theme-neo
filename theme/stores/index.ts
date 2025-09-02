@@ -20,9 +20,12 @@ export const useNeoStore = defineStore("neoStore", () => {
   };
 
   // 计算属性
-  const showLoading = computed(
-    () => loadedCount.value < totalLoadCount.value && totalLoadCount.value > 0
-  );
+  const showLoading = computed(() => {
+    console.log(loadedCount.value);
+    console.log(totalLoadCount.value);
+    
+    return loadedCount.value < totalLoadCount.value && totalLoadCount.value > 0;
+  });
 
   return {
     loadedCount,

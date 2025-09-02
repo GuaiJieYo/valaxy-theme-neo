@@ -20,7 +20,9 @@ export default defineConfig<ThemeConfig>({
       name: "GuaiJie",
       intro: "18 岁事个学生",
       avatar: "https://img.cdn1.vip/i/68b5afdd80f44_1756737501.webp",
-    }
+    },
+    favicon: "https://img.cdn1.vip/i/68b5afdd80f44_1756737501.webp",
+    
   },
 
   features: {
