@@ -6,7 +6,6 @@ import "./styles/vue-transition.scss";
 const neoStore = useNeoStore();
 
 onMounted(() => {
-  neoStore.addTotalLoadCount();
   neoStore.incrementLoadedCount();
 });
 </script>

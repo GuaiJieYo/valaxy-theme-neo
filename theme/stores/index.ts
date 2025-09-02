@@ -7,7 +7,7 @@ import { acceptHMRUpdate, defineStore } from "pinia";
 export const useNeoStore = defineStore("neoStore", () => {
   // 状态
   const loadedCount = ref(0);
-  const totalLoadCount = ref(0);
+  const totalLoadCount = ref(1);
 
   // 操作
   const incrementLoadedCount = () => loadedCount.value++;
