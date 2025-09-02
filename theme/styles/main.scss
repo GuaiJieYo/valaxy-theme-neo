@@ -27,3 +27,8 @@ body,
     height: 2px;
   }
 }
+
+::selection {
+  background: var(--link-hover-color);
+  color: #fff;
+}
